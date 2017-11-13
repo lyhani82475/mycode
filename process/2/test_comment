@@ -1,0 +1,11 @@
+fork() 函数
+getpid() 获取进程id
+getppid() 获取父进程id
+kill(pid,SIGINT)  向某个进程发出信号，从而将其杀死
+wait(&status) 等待其最先结束的子进程，返回值为pid_t类型的等待结束的子进程的id号
+waitpid()
+fork() 对子进程的操作不会影响到父进程
+vfork() 程序必须先运行子进程，然后通过调用exit或_exit函数来结束子进程的运行，从而运行父进程，子进程的操作会影响到父进程
+nice 进程的优先级  getpriority(PRIO_PROCESS,getpid()) 获取进程的优先级    setpriority(PRIO_PROCESS,getpid(),2) 将进程的优先级设置为2
+nice(2) 相当于在原来优先级的基础上+2
+
